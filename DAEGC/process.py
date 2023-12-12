@@ -76,7 +76,7 @@ def get_df_video_cl():
     # 计算发布天数
     df_video_cl['datediff'] = (df_video_cl.cur_time - df_video_cl.created).dt.days.astype(int)
     # 标记是否是短视频
-    df_video_cl['if_short'] = df_video_cl.length2.apply(lambda x: 1 if x<50 else 0)
+    df_video_cl['if_short'] = df_video_cl.length2.apply(lambda x: 1 if x<60 else 0)
     df_video_cl.drop(labels=['cur_time','created','typeid','meta_ep_count'],inplace=True,axis=1)
     return df_video_cl
 

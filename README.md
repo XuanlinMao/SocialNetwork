@@ -1,19 +1,20 @@
 # README
 这是社交网络挖掘课程项目mxl负责部分
 
-目前主要内容是数据爬虫以及聚类，不定期更新中
+目前主要内容是数据爬虫以及聚类，不定期阶段性更新
 
 ## 调用方法
-在上传至github时，因为部分文件过大无法上传，所以只上传了personal_info, video_info的sample
+在上传至github时，因为部分文件过大无法上传，所以只上传了[personal_info](./data/personal_info_sample.xlsx), [video_info](./data/video_info_sample.xlsx)的sample文件
 
 特征工程内容请参考文件[process.py](./DAEGC/process.py), 调用方法见文件[test.ipynb](./DAEGC/test.ipynb), 使用时注意将[process.py](./DAEGC/process.py)文件中的对应数据导入路径修改为自己的路径。
 
 本次清洗主要内容为：
 * nominal变量进行onehot编码
-* pid因为种类过多重新进行了合并，详见SocialNetwork/data/tname.xlsx文件
+* `pid`因为种类过多重新进行了合并，详见[tname.xlsx](./data/tname.xlsx)文件
 * 对大部分连续变量取对数，并统一进行标准化化处理
-* 引入了rolling 7d, 15d, 30d, 90d, 180d, 1y, 3y, 5y, ttl时间段内的多个特征并归一化处理
-最终得到的数据框以mid为主键, 是对up主特征的表示，共9214人，304个特征
+* 引入了rolling `7d`, `15d`, `30d`, `90d`, `180d`, `1y`, `3y`, `5y`, `ttl`时间段内的多个特征并归一化处理
+
+最终得到的数据框以`mid`为主键, 是对up主特征的表示，共`9214`人，`304`个特征
 
 ## 字段含义
 

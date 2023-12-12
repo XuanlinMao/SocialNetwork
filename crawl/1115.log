@@ -1,0 +1,253 @@
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:root:page error at id=644647499, pn=24
+INFO:root:page error at id=644647499, pn=38
+INFO:root:page error at id=1951038, pn=6
+INFO:root:page error at id=22121599, pn=29
+INFO:root:page error at id=22121599, pn=30
+INFO:root:page error at id=22121599, pn=32
+INFO:root:page error at id=8737261, pn=4
+INFO:root:page error at id=7295872, pn=8
+INFO:root:total error at id=826317
+INFO:root:total error at id=221648
+---------------------------------------------------
+INFO:root:total error at id=1331180
+INFO:root:page error at id=4708139, pn=3
+INFO:root:page error at id=2859875, pn=3
+INFO:root:page error at id=1536332, pn=7
+INFO:root:page error at id=1536332, pn=9
+INFO:root:page error at id=1536332, pn=10
+INFO:root:page error at id=2152294, pn=2
+INFO:root:total error at id=4436745
+INFO:root:total error at id=5657589
+INFO:root:page error at id=808171, pn=13
+INFO:root:page error at id=197098, pn=3
+INFO:root:page error at id=353341, pn=3
+INFO:root:page error at id=12369504, pn=5
+INFO:root:page error at id=2776060, pn=8
+INFO:root:total error at id=5670108
+INFO:root:page error at id=6768352, pn=6
+INFO:root:page error at id=6065166, pn=6
+INFO:root:page error at id=5449804, pn=31
+INFO:root:page error at id=20787548, pn=30
+INFO:root:page error at id=20787548, pn=31
+INFO:root:page error at id=585267, pn=7
+INFO:root:page error at id=585267, pn=10
+INFO:root:page error at id=224465105, pn=6
+INFO:root:page error at id=25023900, pn=2
+INFO:root:page error at id=7145647, pn=9
+INFO:root:page error at id=733852, pn=8
+INFO:root:page error at id=397530, pn=3
+INFO:root:page error at id=3822341, pn=39
+INFO:root:page error at id=1334711, pn=4
+INFO:root:page error at id=15161351, pn=2
+INFO:root:page error at id=40966108, pn=6
+INFO:root:page error at id=665457, pn=3
+INFO:root:page error at id=419220, pn=22
+INFO:root:page error at id=419220, pn=33
+INFO:root:page error at id=23219, pn=4
+INFO:root:page error at id=176003, pn=3
+INFO:root:page error at id=2686630, pn=2
+INFO:root:page error at id=2686630, pn=3
+INFO:root:page error at id=389088, pn=8
+INFO:root:page error at id=443126, pn=6
+INFO:root:page error at id=908383, pn=3
+INFO:root:total error at id=107376
+INFO:root:page error at id=739077, pn=3
+INFO:root:page error at id=2419958, pn=2
+INFO:root:page error at id=11073, pn=6
+INFO:root:page error at id=371260, pn=4
+INFO:root:page error at id=23461332, pn=18
+INFO:root:page error at id=23461332, pn=19
+INFO:root:page error at id=23461332, pn=30
+INFO:root:page error at id=23461332, pn=31
+INFO:root:page error at id=23461332, pn=35
+INFO:root:page error at id=23461332, pn=49
+INFO:root:page error at id=25522213, pn=2
+INFO:root:page error at id=557041, pn=15
+INFO:root:total error at id=201434
+INFO:root:page error at id=62540916, pn=5
+INFO:root:total error at id=24865396
+INFO:root:page error at id=12788607, pn=6
+INFO:root:page error at id=12788607, pn=7
+INFO:root:total error at id=5110180
+INFO:root:page error at id=4067803, pn=25
+INFO:root:page error at id=4067803, pn=26
+INFO:root:page error at id=4067803, pn=27
+INFO:root:page error at id=631053, pn=22
+INFO:root:page error at id=631053, pn=26
+INFO:root:total error at id=70432
+INFO:root:page error at id=15479997, pn=7
+INFO:root:page error at id=11100147, pn=9
+INFO:root:page error at id=11100147, pn=15
+INFO:root:total error at id=520116
+INFO:root:page error at id=25182637, pn=28
+INFO:root:page error at id=2177677, pn=9
+INFO:root:total error at id=119978
+INFO:root:page error at id=63240, pn=2
+INFO:root:page error at id=63240, pn=9
+INFO:root:page error at id=63240, pn=12
+INFO:root:total error at id=30992
+INFO:root:total error at id=5325689
+INFO:root:page error at id=17236262, pn=13
+INFO:root:page error at id=2846448, pn=8
+INFO:root:page error at id=559935, pn=2
+INFO:root:page error at id=72936832, pn=5
+INFO:root:page error at id=250475408, pn=10
+INFO:root:page error at id=17125638, pn=27
+INFO:root:page error at id=12697300, pn=2
+INFO:root:page error at id=39101587, pn=16
+INFO:root:page error at id=295723, pn=10
+INFO:root:page error at id=2390247, pn=21
+INFO:root:page error at id=2390247, pn=22
+INFO:root:page error at id=2390247, pn=23
+INFO:root:page error at id=72960, pn=5
+INFO:root:page error at id=72960, pn=7
+INFO:root:page error at id=72960, pn=8
+INFO:root:page error at id=3096477, pn=3
+INFO:root:page error at id=5089070, pn=4
+INFO:root:page error at id=5089070, pn=5
+INFO:root:page error at id=11278832, pn=18
+INFO:root:page error at id=324879, pn=13
+INFO:root:page error at id=324879, pn=16
+INFO:root:page error at id=4694767, pn=14
+INFO:root:page error at id=7103073, pn=13
+INFO:root:page error at id=7103073, pn=21
+INFO:root:page error at id=7103073, pn=22
+INFO:root:page error at id=7103073, pn=23
+INFO:root:page error at id=145716, pn=4
+INFO:root:page error at id=145716, pn=6
+INFO:root:page error at id=6646795, pn=19
+INFO:root:page error at id=24323, pn=3
+INFO:root:page error at id=24323, pn=4
+INFO:root:page error at id=48917, pn=17
+INFO:root:page error at id=48917, pn=18
+INFO:root:page error at id=48917, pn=22
+INFO:root:page error at id=40711647, pn=10
+INFO:root:page error at id=61527399, pn=23
+INFO:root:page error at id=2444579, pn=2
+INFO:root:page error at id=2444579, pn=3
+INFO:root:page error at id=7980111, pn=5
+INFO:root:page error at id=9064879, pn=19
+INFO:root:page error at id=6458603, pn=12
+INFO:root:page error at id=10206987, pn=4
+INFO:root:page error at id=199346, pn=4
+INFO:root:page error at id=1643718, pn=27
+INFO:root:page error at id=1643718, pn=28
+INFO:root:page error at id=15834498, pn=8
+INFO:root:page error at id=10477097, pn=3
+INFO:root:page error at id=10477097, pn=4
+INFO:root:page error at id=10477097, pn=5
+INFO:root:page error at id=4357864, pn=6
+INFO:root:page error at id=4357864, pn=7
+INFO:root:page error at id=8237763, pn=20
+INFO:root:page error at id=8237763, pn=22
+INFO:root:page error at id=8237763, pn=29
+INFO:root:page error at id=2250815, pn=33
+INFO:root:page error at id=16950693, pn=3
+INFO:root:page error at id=454646, pn=2
+INFO:root:page error at id=454646, pn=4
+INFO:root:page error at id=4211655, pn=17
+INFO:root:page error at id=14939580, pn=10
+INFO:root:page error at id=8279670, pn=15
+INFO:root:page error at id=26542815, pn=20
+INFO:root:page error at id=37262203, pn=32
+INFO:root:page error at id=618178, pn=4
+INFO:root:page error at id=9136870, pn=2
+INFO:root:page error at id=9136870, pn=4
+INFO:root:total error at id=30259646
+INFO:root:page error at id=31814567, pn=21
+INFO:root:page error at id=31814567, pn=22
+INFO:root:page error at id=31814567, pn=24
+INFO:root:page error at id=70093, pn=3
+INFO:root:page error at id=70093, pn=5
+INFO:root:page error at id=16505725, pn=52
+INFO:root:page error at id=3295, pn=12
+INFO:root:page error at id=4705522, pn=4
+INFO:root:page error at id=206803, pn=12
+INFO:root:page error at id=198439, pn=4
+INFO:root:page error at id=198439, pn=5
+INFO:root:total error at id=93876791
+INFO:root:total error at id=2402225
+INFO:root:page error at id=2245880, pn=6
+INFO:root:page error at id=7349, pn=21
+INFO:root:page error at id=7349, pn=24
+INFO:root:page error at id=6336952, pn=9
+INFO:root:page error at id=6336952, pn=10
+INFO:root:page error at id=562197, pn=30
+INFO:root:page error at id=9824766, pn=22
+INFO:root:page error at id=10773628, pn=7
+INFO:root:page error at id=10119428, pn=26
+INFO:root:page error at id=1577804, pn=7
+INFO:root:page error at id=2771237, pn=13
+INFO:root:page error at id=36466995, pn=13
+INFO:root:page error at id=4092049, pn=22
+INFO:root:page error at id=75547577, pn=5
+INFO:root:page error at id=69221252, pn=20
+INFO:root:page error at id=35095918, pn=7
+INFO:root:page error at id=125526, pn=9
+-----------------------------------------------
+INFO:root:total error at id=826317
+INFO:root:page error at id=221648, pn=60
+INFO:root:total error at id=1331180
+INFO:root:total error at id=4436745
+INFO:root:total error at id=5657589
+INFO:root:total error at id=5670108
+INFO:root:total error at id=107376
+INFO:root:total error at id=201434
+INFO:root:total error at id=24865396
+INFO:root:total error at id=5110180
+INFO:root:total error at id=70432
+INFO:root:total error at id=520116
+INFO:root:total error at id=119978
+INFO:root:total error at id=30992
+INFO:root:total error at id=5325689
+INFO:root:total error at id=30259646
+INFO:root:total error at id=93876791
+INFO:root:total error at id=2402225
+INFO:root:page error at id=137952, pn=4
+INFO:root:page error at id=16836724, pn=26
+INFO:root:page error at id=358422, pn=4
+INFO:root:page error at id=1677445, pn=3
+INFO:root:page error at id=13636363, pn=2
+INFO:root:page error at id=653768, pn=34
+INFO:root:page error at id=249118, pn=3
+INFO:root:page error at id=1920253, pn=4
+INFO:root:page error at id=2029306, pn=18
+INFO:root:page error at id=17600023, pn=6
+INFO:root:page error at id=12590, pn=5
+INFO:root:page error at id=243566998, pn=33
+INFO:root:page error at id=9596327, pn=26
+INFO:root:page error at id=9596327, pn=32
+INFO:root:page error at id=61879712, pn=45
+INFO:root:page error at id=61879712, pn=46
+INFO:root:page error at id=61879712, pn=47
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:root:-------------------------------------
+INFO:root:-------------------------------------
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:root:-------------------------------------
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+INFO:root:error occurs at id=536913550
+INFO:root:error occurs at id=405007525
+INFO:root:-------------------------------------
+INFO:root:error occurs at id=536913550
+INFO:root:error occurs at id=405007525
+INFO:root:-------------------------------------
+INFO:root:-------------------------------------

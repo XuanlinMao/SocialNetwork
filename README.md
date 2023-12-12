@@ -3,7 +3,17 @@
 
 目前主要内容是数据爬虫以及聚类，不定期更新中
 
+## 调用方法
+在上传至github时，因为部分文件过大无法上传，所以只上传了personal_info, video_info的sample
 
+特征工程内容请参考SocialNetwork/DAEGC/process.py, 调用方法见SocialNetwork/DAEGC/test.ipynb, 使用时注意将process.py文件中的数据路径修改为自己的路径。
+
+本次清洗主要内容为：
+* nominal变量进行onehot编码
+* pid因为种类过多重新进行了合并，详见SocialNetwork/data/tname.xlsx文件
+* 对大部分连续变量取对数，并统一进行标准化化处理
+* 引入了rolling 7d, 15d, 30d, 90d, 180d, 1y, 3y, 5y, ttl时间段内的多个特征并归一化处理
+最终得到的数据框以mid为主键, 是对up主特征的表示，共9214人，304个特征
 
 ## 字段含义
 

@@ -6,7 +6,7 @@
 ## 调用方法
 在上传至github时，因为部分文件过大无法上传，所以只上传了personal_info, video_info的sample
 
-特征工程内容请参考SocialNetwork/DAEGC/process.py, 调用方法见SocialNetwork/DAEGC/test.ipynb, 使用时注意将process.py文件中的数据路径修改为自己的路径。
+特征工程内容请参考文件[process.py](./DAEGC/process.py), 调用方法见文件[test.ipynb](./DAEGC/test.ipynb), 使用时注意将[process.py](./DAEGC/process.py)文件中的对应数据导入路径修改为自己的路径。
 
 本次清洗主要内容为：
 * nominal变量进行onehot编码

@@ -324,7 +324,6 @@ def get_features():
 
     return df_ft
 
-
 def get_adj() -> Tuple[np.ndarray,dict]:
     """
     Returns:

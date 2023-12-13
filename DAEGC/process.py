@@ -4,8 +4,10 @@ import warnings
 warnings.filterwarnings("ignore")
 import pandas as pd
 from tqdm import tqdm
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler,normalize
 from typing import Tuple
+import torch
+import copy
 
 duration_list = [7,15,30,90,180,365,365*3,365*5]
 duration_name_list = ['7d','15d','30d','90d','180d','1y','3y','5y']
@@ -13,12 +15,14 @@ tname_dir = '../data/tname.xlsx'
 personal_info_dir = '../data/personal_info.xlsx'
 video_info_dir = '../data/video_info2.csv'
 
+
+
 ##################################################
 def get_tname():
     return pd.read_excel(tname_dir)
 
 # 清洗personal表格
-def get_df_person_cl():
+def get_df_person_cl(if_scale=True):
     df_person = pd.read_excel(personal_info_dir,index_col=0)
     df_person_cl = df_person.drop(labels=['uname', 'birthday', 'article_count', 'sign', 'p_name', 'n_name',
                                         'n_condition', 'official_title', 'official_desc', 'attention', 'nid',
@@ -48,9 +52,10 @@ def get_df_person_cl():
     df_person_cl['archive_count'] = np.log(1+df_person_cl['archive_count'])
     df_person_cl['like_num'] = np.log(1+df_person_cl['like_num'])
     # 连续变量标准化
-    scaler = StandardScaler()
-    col_to_scale = ['fans','friend','cur_level','archive_count','like_num']
-    df_person_cl[col_to_scale] = scaler.fit_transform(df_person_cl[col_to_scale])
+    if if_scale:
+        scaler = StandardScaler()
+        col_to_scale = ['fans','friend','cur_level','archive_count','like_num']
+        df_person_cl[col_to_scale] = scaler.fit_transform(df_person_cl[col_to_scale])
     return df_person_cl
 
 
@@ -297,9 +302,9 @@ def get_cat_num(df_p, df_v):
 
 
 
-def get_features():
+def get_features(if_scale=True):
     print('loading data...')
-    df_person_cl = get_df_person_cl()
+    df_person_cl = get_df_person_cl(if_scale)
     df_video_cl = get_df_video_cl()
     
     print('getting features - 1st step...')
@@ -315,15 +320,15 @@ def get_features():
     print('getting features - 2nd step...')
     df_ft = get_cat_num(df_ft, df_video_cl)
 
-    print('scaling...')
-    for i in range(np.where(df_ft.columns=='comment_7d')[0][0], df_ft.shape[1]):
-        df_ft.iloc[:,i] = np.log(1+df_ft.iloc[:,i])
-    scaler = StandardScaler()
-    df_ft.iloc[:, np.where(df_ft.columns=='comment_7d')[0][0]:df_ft.shape[1]] = scaler.fit_transform(df_ft.iloc[:, np.where(df_ft.columns=='comment_7d')[0][0]:df_ft.shape[1]])
+    if if_scale:
+        print('scaling...')
+        for i in range(np.where(df_ft.columns=='comment_7d')[0][0], df_ft.shape[1]):
+            df_ft.iloc[:,i] = np.log(1+df_ft.iloc[:,i])
+        scaler = StandardScaler()
+        df_ft.iloc[:, np.where(df_ft.columns=='comment_7d')[0][0]:df_ft.shape[1]] = scaler.fit_transform(df_ft.iloc[:, np.where(df_ft.columns=='comment_7d')[0][0]:df_ft.shape[1]])
     print('--------DONE--------')
 
     return df_ft
-
 
 def get_adj() -> Tuple[np.ndarray,dict]:
     """
@@ -332,6 +337,7 @@ def get_adj() -> Tuple[np.ndarray,dict]:
     - Adjacent matrix based on the following relationship
     - Mid dictionary, which contains mid as key and index as value
     """
+    print('generating adjacent matrix...')
     df_fl1 = pd.read_csv('../data/following1.csv')
     df_fl2 = pd.read_csv('../data/following2.csv')
     df_ft_mid = get_df_person_cl().reset_index(drop=True).mid
@@ -353,5 +359,33 @@ def get_adj() -> Tuple[np.ndarray,dict]:
             js = np.vectorize(lambda x: mid_dic.get(x,-1))(ids)
             js = js[js!=-1]
             adj[i,js] = 1
+    adj+=np.eye(df_fl.shape[0])
 
-    return(adj, mid_dic)
+    return(adj, mid_dic, mid_list)
+
+
+def get_M(adj):
+    adj_numpy = adj.cpu().numpy()
+    # t_order
+    t=2
+    tran_prob = normalize(adj_numpy, norm="l1", axis=0)
+    M_numpy = sum([np.linalg.matrix_power(tran_prob, i) for i in range(1, t + 1)]) / t
+    return torch.Tensor(M_numpy)
+
+
+class myDataSet:
+    def __init__(self,if_scale=True) -> None:
+        self.adj_label, self.mid_dic, self.mid = get_adj()
+
+        df_feature = get_features(if_scale)
+        df_feature = df_feature.loc[df_feature.mid.isin(self.mid),:].reset_index(drop=True) # 删掉Adjacent里没有的id
+        df_feature.drop(['mid'],inplace=True,axis=1) # 删掉mid列
+        self.x = torch.tensor(df_feature.values, dtype=torch.float)
+        self.num_features = df_feature.shape[1]
+        self.num_samples = df_feature.shape[0]
+        # 对adj归一化并保留最初的adj为adj_label
+        self.adj = copy.deepcopy(self.adj_label)
+        self.adj = normalize(self.adj, norm="l1")
+        # 转换为tensor格式
+        self.adj = torch.from_numpy(self.adj).to(dtype=torch.float)
+        self.adj_label = torch.from_numpy(self.adj_label).to(dtype=torch.float)
